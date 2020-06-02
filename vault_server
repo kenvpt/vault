@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo yum install wget unzip -y
+sudo wget https://releases.hashicorp.com/vault/1.4.2/vault_1.4.2_linux_amd64.zip
+sudo unzip vault_1.4.2_linux_amd64.zip
+sudo mv vault /usr/bin
+sudo mkdir /etc/vault
+sudo mkdir /opt/vault-data
+sudo mkdir -p /logs/vault/
+sudo vi /etc/vaultconfig.json #you can put your own conf file for your vault server here
